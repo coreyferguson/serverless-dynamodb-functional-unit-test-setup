@@ -1,7 +1,5 @@
 
-# Serverless DynamoDB Functional Unit Test Setup
-
-Holy cow that's a long name...
+# local-dynamo-facade
 
 ## Summary
 
@@ -14,6 +12,8 @@ This module is piggy-backing off [local-dynamo][] to start the dynamodb process.
 ## Usage
 
 ```javascript
+const LocalDynamoFacade = require('local-dynamo-facade');
+
 describe('dynamodb local integration tests', () => {
 
   const facade = new LocalDynamoFacade(

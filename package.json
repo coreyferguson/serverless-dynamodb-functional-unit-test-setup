@@ -1,5 +1,5 @@
 {
-  "name": "serverless-dynamodb-functional-unit-test-setup",
+  "name": "local-dynamo-facade",
   "version": "1.0.0",
   "description": "Starts a local dyanmodb server for integration testing of serverless table definitions and DAO.",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coreyferguson/serverless-dynamodb-functional-unit-test-setup.git"
+    "url": "git+https://github.com/coreyferguson/local-dynamo-facade.git"
   },
   "keywords": [
     "serverless",
@@ -19,14 +19,16 @@
     "test",
     "integration",
     "local",
-    "functional"
+    "functional",
+    "setup",
+    "bootstrap"
   ],
   "author": "Corey Ferguson <corey.t.ferguson@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coreyferguson/serverless-dynamodb-functional-unit-test-setup/issues"
+    "url": "https://github.com/coreyferguson/local-dynamo-facade/issues"
   },
-  "homepage": "https://github.com/coreyferguson/serverless-dynamodb-functional-unit-test-setup#readme",
+  "homepage": "https://github.com/coreyferguson/local-dynamo-facade#readme",
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.1.1"
