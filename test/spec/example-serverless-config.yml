@@ -1,0 +1,23 @@
+
+service: dynamodb-local-test
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: nodejs6.10
+
+resources:
+  Resources:
+    exampleTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ExampleTable
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
