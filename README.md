@@ -4,10 +4,12 @@
 ## Summary
 
 Use this module to run dynamodb locally for functional unit testing.
+It's intended for use with the [serverless][] framework.
 
 This module is piggy-backing off [local-dynamo][] to start the dynamodb process.
 
 [local-dynamo]: https://github.com/Medium/local-dynamo
+[serverless]: https://github.com/serverless/serverless
 
 ## Usage
 
@@ -50,4 +52,5 @@ See tests for working example.
 
 ## Environment Dependencies
 
-- `java` in system `PATH`
+- `java`
+- `aws` CLI

@@ -2,7 +2,7 @@
   "name": "local-dynamo-facade",
   "version": "1.0.0",
   "description": "Starts a local dyanmodb server for integration testing of serverless table definitions and DAO.",
-  "main": "index.js",
+  "main": "src/LocalDynamoFacade.js",
   "scripts": {
     "debug": "./node_modules/.bin/mocha --recursive --watch --inspect --debug-brk test/spec",
     "test": "./node_modules/.bin/mocha --recursive test/spec",
