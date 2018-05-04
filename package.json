@@ -1,0 +1,28 @@
+{
+  "name": "serverless-dynamodb-functional-unit-test-setup",
+  "version": "1.0.0",
+  "description": "Starts a local dyanmodb server for integration testing of serverless table definitions and DAO.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreyferguson/serverless-dynamodb-functional-unit-test-setup.git"
+  },
+  "keywords": [
+    "serverless",
+    "dynamodb",
+    "unit",
+    "test",
+    "integration",
+    "local",
+    "functional"
+  ],
+  "author": "Corey Ferguson <corey.t.ferguson@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coreyferguson/serverless-dynamodb-functional-unit-test-setup/issues"
+  },
+  "homepage": "https://github.com/coreyferguson/serverless-dynamodb-functional-unit-test-setup#readme"
+}
