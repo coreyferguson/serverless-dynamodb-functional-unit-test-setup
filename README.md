@@ -18,9 +18,7 @@ const LocalDynamoFacade = require('local-dynamo-facade');
 
 describe('dynamodb local integration tests', () => {
 
-  const facade = new LocalDynamoFacade(
-    path.join('/absolute/path/to/serverless.yml')
-  );
+  const facade = new LocalDynamoFacade('/absolute/path/to/serverless.yml');
   let dynamodb;
 
   before(() => {
