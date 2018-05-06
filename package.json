@@ -5,6 +5,7 @@
   "main": "src/LocalDynamoFacade.js",
   "scripts": {
     "debug": "./node_modules/.bin/mocha --recursive --watch --inspect --debug-brk test/spec",
+    "release": "node_modules/.bin/release-it",
     "test": "./node_modules/.bin/mocha --recursive test/spec",
     "watch": "./node_modules/.bin/mocha --recursive --watch test/spec"
   },
@@ -31,7 +32,8 @@
   "homepage": "https://github.com/coreyferguson/local-dynamo-facade#readme",
   "devDependencies": {
     "chai": "4.1.2",
-    "mocha": "5.1.1"
+    "mocha": "5.1.1",
+    "release-it": "^7.4.3"
   },
   "dependencies": {
     "aws-sdk": "2.233.1",
