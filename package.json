@@ -1,6 +1,6 @@
 {
   "name": "local-dynamo-facade",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Starts a local dyanmodb server for integration testing of serverless table definitions and DAO.",
   "main": "src/LocalDynamoFacade.js",
   "scripts": {
