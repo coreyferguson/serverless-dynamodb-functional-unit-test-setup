@@ -52,7 +52,8 @@ class LocalDynamoFacade {
         TableName: tableName,
         KeySchema: resource.Properties.KeySchema,
         AttributeDefinitions: resource.Properties.AttributeDefinitions,
-        ProvisionedThroughput: resource.Properties.ProvisionedThroughput
+        ProvisionedThroughput: resource.Properties.ProvisionedThroughput,
+        GlobalSecondaryIndexes: resource.Properties.GlobalSecondaryIndexes
       }, (err, data) => {
         if (err) reject(err);
         else resolve(data);
