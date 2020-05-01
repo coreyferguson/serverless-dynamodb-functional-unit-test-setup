@@ -48,12 +48,27 @@ class LocalDynamoFacade {
 
   _createTable(resource, tableName) {
     return new Promise((resolve, reject) => {
+      let GlobalSecondaryIndexes;
+      if (resource.Properties.GlobalSecondaryIndexes) {
+        GlobalSecondaryIndexes = resource.Properties.GlobalSecondaryIndexes.map(GlobalSecondaryIndex => {
+          return {
+            ...GlobalSecondaryIndex,
+            ProvisionedThroughput: {
+              ReadCapacityUnits: 5,
+              WriteCapacityUnits: 5
+            }
+          }
+        })
+      }
       this._dynamodb.createTable({
         TableName: tableName,
         KeySchema: resource.Properties.KeySchema,
         AttributeDefinitions: resource.Properties.AttributeDefinitions,
-        ProvisionedThroughput: resource.Properties.ProvisionedThroughput,
-        GlobalSecondaryIndexes: resource.Properties.GlobalSecondaryIndexes
+        ProvisionedThroughput: resource.Properties.ProvisionedThroughput || {
+          ReadCapacityUnits: 5,
+          WriteCapacityUnits: 5
+        },
+        GlobalSecondaryIndexes,
       }, (err, data) => {
         if (err) reject(err);
         else resolve(data);
